@@ -54,7 +54,10 @@ ul {
 /* Хедер */
 
 .head {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .head .container {
@@ -75,11 +78,25 @@ ul {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-studio:hover,
 .nav-link-studio:focus {
     color: #404bbf;
+}
+
+.nav-link-studio::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .contact-info {
@@ -90,6 +107,7 @@ ul {
 .contact-list {
     display: flex;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link {
@@ -142,6 +160,11 @@ header address ul li a {
     background-color: #2e2f42;
     padding: 188px 0;
     text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-title {
@@ -173,6 +196,7 @@ header address ul li a {
     border-radius: 4px;
     cursor: pointer;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -209,6 +233,17 @@ header address ul li a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
 }
 
 .icon-sol {
@@ -258,6 +293,9 @@ header address ul li a {
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-list {
@@ -287,14 +325,25 @@ header address ul li a {
     text-align: center;
 }
 
+.social-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+
 .icon-t {
     display: flex;
     justify-content: center;
     gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
 }
 
 .icon-team {
@@ -304,8 +353,8 @@ header address ul li a {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;  
+    justify-content: center; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team:hover {
@@ -313,7 +362,7 @@ header address ul li a {
 }
 
 .icons {
-    fill: #FFFFFF;
+    fill: #f4f4fd;
 }
 
 /* Секція Portfolio */
@@ -378,6 +427,8 @@ footer {
     background-color: #2e2f42;
     padding: 100px 0;
 }
+
+
 
 .foot .logo_ {
     color: #f4f4fd;
