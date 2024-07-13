@@ -32,10 +32,6 @@ ul {
     padding: 0;
 }
 
-.icons {
-    fill: #f4f4fd;
-}
-
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -367,6 +363,10 @@ header address ul li a {
     background-color: #3751d5;
 }
 
+.t-icon {
+    fill: #f4f4fd;
+} 
+
 /* Секція Portfolio */
 
 .portfolio {
@@ -533,5 +533,5 @@ footer {
 }
 
 .icons {
-    fill: #FFFFFF;
+    fill: #f4f4fd;
 }
